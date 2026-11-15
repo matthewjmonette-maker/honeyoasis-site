@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honeyoasis | Go-to-market expertise, productised with AI</title>
+<meta name="description" content="Honeyoasis turns proven go-to-market playbooks into AI-assisted workflows for B2B technology scaleups. Headquartered in Lisbon, Portugal.">
+<meta property="og:title" content="Honeyoasis | Go-to-market expertise, productised with AI">
+<meta property="og:description" content="AI-assisted go-to-market toolkit for B2B technology scaleups. Headquartered in Lisbon, Portugal.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://honeyoasis.ai/">
+<link rel="canonical" href="https://honeyoasis.ai/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4l24 14v28L32 60 8 46V18z' fill='%23E2A93B'/%3E%3Cpath d='M32 18l12 7v14l-12 7-12-7V25z' fill='%2313262C'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#13262C; --body:#3D4A50; --muted:#5B676C;
+  --honey:#E2A93B; --honey-dk:#8A5A0F;
+  --sand:#F6F1E7; --sand-2:#ECE4D3; --card:#FBF8F2; --line:#DDD3C0;
+  --on-dark:#F3EEE4; --on-dark-2:#C9D6D3;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --max: 1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--body);background:var(--sand);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{color:var(--ink);line-height:1.15;letter-spacing:-0.02em}
+h1{font-size:clamp(2.4rem,5.5vw,4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:750;margin-bottom:18px}
+h3{font-size:1.12rem;font-weight:700;margin-bottom:6px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--honey-dk);margin-bottom:14px}
+.lead{font-size:1.15rem;max-width:640px}
+section{padding:88px 0}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(19,38,44,.96);backdrop-filter:saturate(1.4) blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-dark);font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand svg{width:26px;height:26px}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{color:var(--on-dark-2);text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--on-dark)}
+.btn{display:inline-block;background:var(--honey);color:var(--ink);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;font-size:.98rem;transition:transform .15s ease,background .15s ease}
+.btn:hover{background:#ECB850;transform:translateY(-1px)}
+.btn.small{padding:8px 16px;font-size:.9rem}
+.btn.ghost{background:transparent;color:var(--on-dark);box-shadow:inset 0 0 0 1.5px rgba(243,238,228,.35)}
+.btn.ghost:hover{background:rgba(243,238,228,.08)}
+
+/* hero */
+.hero{background:var(--ink);color:var(--on-dark-2);padding:104px 0 112px;position:relative;overflow:hidden}
+.hero h1{color:var(--on-dark);max-width:820px}
+.hero h1 em{font-style:normal;color:var(--honey)}
+.hero .lead{color:var(--on-dark-2);margin:22px 0 34px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .eyebrow{color:var(--honey)}
+.hex{position:absolute;right:-80px;top:40px;width:460px;opacity:.09;pointer-events:none}
+
+/* problem */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card p{font-size:.98rem}
+.problem .intro{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
+
+/* insight band */
+.band{background:var(--honey);padding:72px 0}
+.band p{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:780;color:var(--ink);line-height:1.25;letter-spacing:-.02em;max-width:880px}
+
+/* how */
+.how{background:var(--sand-2)}
+.num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--honey);font-weight:800;font-size:.9rem;margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.step{background:var(--card);border-radius:16px;padding:22px;border:1px solid var(--line)}
+.step .k{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--honey-dk)}
+.note{margin-top:22px;font-weight:600;color:var(--ink)}
+
+/* modules */
+.mod{display:flex;gap:18px;align-items:flex-start}
+.mod .tag{flex:none;font-weight:800;color:var(--honey-dk);font-size:1.05rem;padding-top:1px}
+
+/* compare */
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line);font-size:.97rem}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--sand-2);color:var(--ink);font-weight:700}
+td:first-child{font-weight:650;color:var(--ink);width:24%}
+tr:last-child td{border-bottom:0}
+td.hl{background:#F7ECD3}
+
+/* about */
+.about{background:var(--sand-2)}
+.about .grid2{align-items:start}
+.founder h3{font-size:1.4rem}
+.founder .role{color:var(--honey-dk);font-weight:700;margin-bottom:14px}
+.founder ul{list-style:none;display:grid;gap:10px}
+.founder li{padding-left:22px;position:relative}
+.founder li:before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;background:var(--honey);transform:rotate(45deg);border-radius:2px}
+.facts dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:.97rem}
+.facts dt{font-weight:700;color:var(--ink)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--on-dark-2);text-align:left}
+.contact h2{color:var(--on-dark)}
+.contact .eyebrow{color:var(--honey)}
+.contact .lead{color:var(--on-dark-2);margin-bottom:30px}
+.contact .mail{font-size:1.25rem;color:var(--honey);font-weight:700;text-decoration:none}
+.contact .mail:hover{text-decoration:underline}
+
+footer{background:#0E1D22;color:#8FA3A0;font-size:.85rem;padding:30px 0}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .grid3,.steps{grid-template-columns:1fr 1fr}
+  .problem .intro{grid-template-columns:1fr;gap:16px}
+  .nav ul{display:none}
+}
+@media (max-width:620px){
+  section{padding:64px 0}
+  .grid3,.grid2,.steps{grid-template-columns:1fr}
+  .hero{padding:72px 0 80px}
+  table{font-size:.9rem} th,td{padding:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Honeyoasis home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l24 14v28L32 60 8 46V18z" fill="#E2A93B"/><path d="M32 18l12 7v14l-12 7-12-7V25z" fill="#13262C"/></svg>
+      Honeyoasis
+    </a>
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a class="btn small" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <svg class="hex" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l24 14v28L32 60 8 46V18z" fill="none" stroke="#E2A93B" stroke-width="1.2"/><path d="M32 14l15.6 9v18L32 50 16.4 41V23z" fill="none" stroke="#E2A93B" stroke-width="1.2"/><path d="M32 24l6.9 4v8L32 40l-6.9-4v-8z" fill="none" stroke="#E2A93B" stroke-width="1.2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">AI-assisted go-to-market · Lisbon</p>
+    <h1>Go-to-market expertise, <em>productised with AI.</em></h1>
+    <p class="lead">Honeyoasis turns proven strategy, positioning and sales-enablement playbooks into AI-assisted workflows, so B2B technology scaleups get senior-level go-to-market work without hiring a full sales leadership team.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">Talk to us</a>
+      <a class="btn ghost" href="#how">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">The problem</p>
+        <h2>Young B2B tech companies need to sell before they can afford a sales leader.</h2>
+      </div>
+      <p class="lead">Most early-stage teams are a handful of people. The founder closes the first deals, then growth stalls when there is no repeatable playbook to hand over.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><h3>Founder-led sales stalls</h3><p>Founders close the first deals themselves, but without a repeatable playbook, growth stops when their time runs out.</p></div>
+      <div class="card"><h3>Senior talent is scarce</h3><p>Experienced sales and marketing leaders are expensive and hard to hire this early, especially across several markets.</p></div>
+      <div class="card"><h3>Consulting doesn’t scale</h3><p>Advisers rebuild the same ICPs, decks and comp plans by hand for every client, so cost rises with every hour.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <p>Go-to-market expertise has always been sold by the hour. Honeyoasis turns it into a system that scales.</p>
+  </div>
+</div>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Proven playbooks, turned into AI-assisted workflows.</h2>
+    <div class="grid3" style="margin-top:28px">
+      <div class="card"><span class="num">1</span><h3>Codified frameworks</h3><p>Strategy, positioning, enablement and revenue-planning methods from years at fast-growing tech companies, captured as structured, reusable playbooks.</p></div>
+      <div class="card"><span class="num">2</span><h3>AI generation</h3><p>AI agents apply those playbooks to each client’s product, market and brand, producing first drafts of every go-to-market asset.</p></div>
+      <div class="card"><span class="num">3</span><h3>Expert review</h3><p>A senior operator reviews, tailors and signs off every output, so quality stays high while delivery time falls.</p></div>
+    </div>
+    <div class="steps">
+      <div class="step"><p class="k">Step 1</p><h3>Intake</h3><p>Product docs, customer data, brand guidelines and growth goals.</p></div>
+      <div class="step"><p class="k">Step 2</p><h3>Generate</h3><p>AI agents apply Honeyoasis playbooks to draft every asset.</p></div>
+      <div class="step"><p class="k">Step 3</p><h3>Review</h3><p>Expert tailoring, quality checks and client workshops.</p></div>
+      <div class="step"><p class="k">Step 4</p><h3>Deliver and reuse</h3><p>Finished assets plus a knowledge base the client keeps using.</p></div>
+    </div>
+    <p class="note">Every engagement improves the playbooks and prompts, so the system gets better with each client.</p>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="wrap">
+    <p class="eyebrow">Modules</p>
+    <h2>Four modules cover the full go-to-market system.</h2>
+    <div class="grid2" style="margin-top:28px">
+      <div class="card mod"><span class="tag">01</span><div><h3>Strategy</h3><p>Ideal customer profiles, segmentation, market sizing and pricing options.</p></div></div>
+      <div class="card mod"><span class="tag">02</span><div><h3>Positioning and messaging</h3><p>Value propositions, competitive positioning and message frameworks by buyer persona.</p></div></div>
+      <div class="card mod"><span class="tag">03</span><div><h3>Sales enablement</h3><p>On-brand pitch decks, battlecards, objection handling and sales training material.</p></div></div>
+      <div class="card mod"><span class="tag">04</span><div><h3>Revenue organisation</h3><p>Sales compensation plans, hiring plans, pipeline targets and forecast models.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <p class="eyebrow">Why it’s different</p>
+    <h2>Knowledge that scales with software, not headcount.</h2>
+    <div style="overflow-x:auto;margin-top:28px">
+      <table>
+        <thead><tr><th></th><th>Traditional consultancy</th><th>Honeyoasis</th></tr></thead>
+        <tbody>
+          <tr><td>How work is done</td><td>Built by hand for each client</td><td class="hl">Generated from reusable playbooks by AI, then expert-reviewed</td></tr>
+          <tr><td>What drives cost</td><td>Senior hours</td><td class="hl">Software plus focused expert time</td></tr>
+          <tr><td>Knowledge</td><td>Stays in the consultant’s head</td><td class="hl">Codified, versioned and improved with each client</td></tr>
+          <tr><td>Growth</td><td>Linear with headcount</td><td class="hl">Revenue can grow faster than the team</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Working with us</p>
+    <h2>Two ways to engage today.</h2>
+    <div class="grid2" style="margin-top:28px">
+      <div class="card"><h3>Monthly retainer</h3><p>Ongoing build, implementation and advisory across the modules your team needs, delivered with Honeyoasis workflows.</p></div>
+      <div class="card"><h3>Advisory sessions</h3><p>One-off or recurring hourly consults for founders and go-to-market leaders working through a specific problem.</p></div>
+    </div>
+    <p class="note" style="font-weight:500;color:var(--muted)">We currently work with B2B technology companies in the UK and the UAE as design partners, shaping the toolkit as it is built.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h2>Founder-led, built in Lisbon.</h2>
+    <div class="grid2" style="margin-top:28px">
+      <div class="card founder">
+        <h3>Matt Monette</h3>
+        <p class="role">Founder and Managing Director</p>
+        <ul>
+          <li>Go-to-market strategy, sales enablement and product positioning for B2B technology companies.</li>
+          <li>Experience at Shopify and Deel, two founder-led companies that scaled globally.</li>
+          <li>Builds the Honeyoasis playbooks and the AI workflows used in client delivery.</li>
+        </ul>
+      </div>
+      <div class="card facts">
+        <h3 style="margin-bottom:16px">Company</h3>
+        <dl>
+          <dt>Legal name</dt><dd>Honeyoasis Unipessoal, Lda</dd>
+          <dt>NIPC</dt><dd>519100344</dd>
+          <dt>Founded</dt><dd>November 2025</dd>
+          <dt>Headquarters</dt><dd>Rua Gervásio Lobato 36, Campo de Ourique, Lisbon, Portugal</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Building your first go-to-market engine?</h2>
+    <p class="lead">Tell us where you are and what you are trying to sell. We reply within two working days.</p>
+    <a class="mail" href="mailto:matt@honeyoasis.ai">matt@honeyoasis.ai</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Honeyoasis Unipessoal, Lda · NIPC 519100344</span>
+    <span>Rua Gervásio Lobato 36, Campo de Ourique, Lisbon, Portugal</span>
+  </div>
+</footer>
+
+</body>
+</html>
